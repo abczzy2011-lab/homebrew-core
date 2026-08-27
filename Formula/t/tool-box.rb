@@ -8,7 +8,10 @@ class ToolBox < Formula
   license "MIT"
 
   def install
-    libexec.install Dir["*"]
+    libexec.install "tool-box"
+    libexec.install "start.py"
+    prefix.install "LICENSE"
+    prefix.install "out"
     bin.write_exec_script libexec/"tool-box"
   end
 end
