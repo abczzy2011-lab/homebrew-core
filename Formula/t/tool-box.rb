@@ -8,8 +8,7 @@ class ToolBox < Formula
   license "MIT"
 
   def install
-    prefix.install Dir["*"]
-    libexec.install "tool-box"
+    libexec.install Dir["*"]
     bin.write_exec_script libexec/"tool-box"
   end
 end
